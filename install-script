@@ -20,3 +20,9 @@ mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.ext4 /dev/sda3 {filesystem doesn't need to be ext4, you can use xfs, fat32 etc}
 
+/*Base Install*/
+
+mount /dev/sda3 /mnt {mounts it to mnt on live image}
+pacstrap /mnt base linux linux-firmware
+genfstab -U /mnt >> /mnt/etc/fstab
+
