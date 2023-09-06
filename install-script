@@ -1,7 +1,7 @@
 
 
 
-/* Using FDisk */
+/*Using FDisk*/
 
 fdisk -l   (lists out the partitions)
 fdisk /dev/sda  
