@@ -11,3 +11,11 @@ fdisk, "n" for add new partition
 fdisk, "p" for primary partition (if using MBR instead of GPT)
 fdisk, "t" to change partition type
 fdisk, "w" (write table to disk)
+
+
+/*Making the filesystem*/
+mkfs.fat -F32 /dev/sda1
+mkswap /dev/sda2
+swapon /dev/sda2
+mkfs.ext4 /dev/sda3 {filesystem doesn't need to be ext4, you can use xfs, fat32 etc}
+
