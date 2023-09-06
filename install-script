@@ -8,12 +8,13 @@ fdisk /dev/sda
 fdisk, "m" for help
 fdisk, "o" for DOS partition or "g" for GPT
 fdisk, "n" for add new partition
-fdisk, "p" for primary partition (if using MBR instead of GPT)
+fdisk, "p" for primary partition {if using MBR instead of GPT}
 fdisk, "t" to change partition type
-fdisk, "w" (write table to disk)
+fdisk, "w" {write table to disk}
 
 
 /*Making the filesystem*/
+
 mkfs.fat -F32 /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
